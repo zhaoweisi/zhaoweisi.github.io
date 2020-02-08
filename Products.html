@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF=8">
+	<title>Products</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<!-- Nav bar -->
+	<div class="topNav">
+	  <a href="index.html">Home</a>
+	  <a class="active" href="Products.html">Browse Products</a>
+  	<a href="Register.html">Register</a>
+		<a href="admin.html">Admin</a>
+	</div>
+	<br/>
+
+	<!-- Search Form -->
+	<form action="/" method="post">
+	    <fieldset>
+	        <legend>Search Products</legend>
+	        <!-- <label>Name:
+				  <input type="text" name="name" id="name">
+	        </label>
+	        <br /> -->
+					<p>
+							<label for="price-range">Selcet price range </label>
+							<select name="price-range" id="price-range">
+									<option value="below_5"> < $5 </option>
+									<option value="_5_10"> $5-10 </option>
+									<option value="_10_20"> $10-20 </option>
+									<option value="_20_above"> > $20 </option>
+							</select>
+					</p>
+			<input type="submit" name="search_submit" id="search_submit">
+	    </fieldset>
+	</form>
+
+	<!-- Display Search Results -->
+	<br/>
+	<h3>Display Search Results (sample, will populate from DB) </h3>
+ <table border = "1" width = "400" height = "80" align="center">
+		<tr>
+			 <td>Name </td>
+			 <td>Stock </td>
+			 <td>Quantity </td>
+			 <td>Order </td>
+		</tr>
+
+		<tr>
+			 <td>Apple (2lbs)</td>
+			 <td>100</td>
+			 <td>
+           <input type="text" name="quant_to_order" form="order_form" />
+			 </td>
+			 <td><button class="order_btn">Order</button></td>
+		</tr>
+ </table>
+
+	<!-- Shopping cart  -->
+	<h3>Shopping Cart (sample, will populate as user selects) </h3>
+	<table border = "1" width = "300" height = "80" align="center">
+ 		<tr>
+ 			 <td>Name </td>
+ 			 <td>Quantity </td>
+ 			 <td>Remove </td>
+ 		</tr>
+
+ 		<tr>
+ 			 <td>Apple (2lbs)</td>
+ 			 <td>3</td>
+			 <td><button class="cart_del_btn">Delete Row</button></td>
+ 		</tr>
+  </table>
+
+	<!-- Submit email -->
+	<h3>Place Order </h3>
+	<p>If this order looks right, please type your email here to place the order.</p>
+	<p>If you haven't signed up for an account yet, you'll need to do so before placing an order.</p>
+	<form action="/" method="post">
+	    <fieldset>
+				<p>
+	        <label>Email:
+				    <input type="text" name="email" id="email">
+	        </label>
+					<p>
+			<input type="submit" name="email_submit" id="email_submit">
+	    </fieldset>
+	</form>
+
+	<!-- Retrieve orders -->
+	<h3>Show Submitted Order(s) (sample, will populate from DB)</h3>
+	<table border = "1" width = "300" height = "80" align="center">
+ 		<tr>
+ 			 <td bgcolor="#AAD54E">Order date </td>
+ 			 <td bgcolor="#AAD54E">Total </td>
+ 		</tr>
+ 		<tr>
+    	 <td>2020-01-05</td>
+			 <td>$16</td>
+ 		</tr>
+
+		<tr>
+			<td bgcolor="#AAD54E">Items </td>
+			<td bgcolor="#AAD54E">Quantity </td>
+		</tr>
+		<tr>
+			<td>Apple (2lbs)</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>Grapes (2lbs)</td>
+			<td>2</td>
+		</tr>
+  </table>
+
+	<br/>
+	<br/>
+
+	<table border = "1" width = "300" height = "80" align="center">
+ 		<tr>
+ 			 <td bgcolor="#AAD54E">Order date </td>
+ 			 <td bgcolor="#AAD54E">Total </td>
+ 		</tr>
+ 		<tr>
+    	 <td>2020-02-05</td>
+			 <td>$20</td>
+ 		</tr>
+		<tr>
+			<td bgcolor="#AAD54E">Items </td>
+			<td bgcolor="#AAD54E">Quantity </td>
+		</tr>
+		<tr>
+			<td>Milk (1 Gallon)</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Lettuce (1 Bunch)</td>
+			<td>2</td>
+		</tr>
+  </table>
+
+	<!-- <script src="script_2.js"></script> --> -->
+</body>
+</html>
